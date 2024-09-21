@@ -11,6 +11,26 @@
 #define BIT_1 0x01
 #define BIT_8_6 0xA0
 
+unsigned char set_bit (unsigned char aCh, unsigned char aN)
+    {
+        return (aCh | (1 << (aN-1)));
+    }
+
+unsigned char clear_bit (unsigned char aCh, unsigned char aN)
+    {
+        return (aCh & ~(1 << (aN-1)));
+    }
+
+unsigned char invert_bit (unsigned char aCh, unsigned char aN)
+{
+    return (aCh ^ (1 << (aN-1)));
+}
+
+unsigned char test_bit (unsigned char aCh, unsigned char aN)
+    {
+        return (aCh & (1 << (aN-1)));
+    }
+
 
 //! ЭТО ЦИКЛ
 void print_bits_state(unsigned char aCh){

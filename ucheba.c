@@ -5,20 +5,92 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
 
 #define CURRENT_YEAR 2021
 
 int main() {
+//! МАССИВЫ
+//ТУТ ПРИМЕРЫ ДЯДЬКИ
+
+
+
+// ТУТ ПРИМЕР(-ы) 21-ой ГЛАВЫ
+
+/*int points[10] = {12, 5, 21, 15, 32, 10};
+int i;
+float srv;
+int allPoints = 0;
+for(i = 6; i < 10; i++){
+  printf("Players points for the game №%d: ", i+1);
+  scanf("%d", &points[i]);
+}
+
+for (i=0; i<10; i++)
+{
+  allPoints += points [i];
+}
+
+srv = ((float)allPoints / 10);
+printf("Total points: %d\n", allPoints);
+printf("Average points for all days: %.2f\n", srv);
+*/
+
+//! Если массив char - нуль-символ выводится
+//! Если массив int - нуль-символ не выводится
+/*
+char ages[3];
+int i;
+for (i = 0; i < 3; i++)
+{
+printf("Введите возраст ребенка №%d ", i+1);
+scanf("%hhd", &ages[i]); //Получает от пользователя следующий возраст
+}
+printf("%hhd\n", ages[3]);
+*/
+
+/*
+char array [20];
+printf("%s\n", strcpy(array, "Hello"));
+int vals[5] = {10, 40, 70, 90, 120};
+printf("%d %d %d %d %d\n", vals[0], vals[1], vals[2], vals[3], vals[4]);
+char grades[5] = {'A', 'B', 'C', 'D', 'F'};
+printf("%c %c %c %c %c\n", grades[0], grades[1], grades[2], grades[3], grades[4]);
+char grades2[5] = {'A', 'B', 'C', 'D', '\0'};
+fgets(grades2, sizeof(grades2), stdin);
+grades2[strcspn(grades2, "\n")] = 0;
+*/
+
 // ТУТ ПРИМЕР(-ы) 20-ой ГЛАВЫ
+//! Генерация случайных чисел
+/*
+float dice;
+dice = (rand() % 5) ; //От 1 до 6
+printf("Вы получили кубик с числом %.0f.\n", dice);
+*/
+//! Функция rand() возвращает случайное число от 0 до максимального значения int.
+//! Функция srand() устанавливает новое значение порождающего числа для случайных чисел.
+//! Функция rand() использует порождающее число для генерации случайных чисел.
 
+/*float dollars = 0.0;
+//! И положительное и отрицательное округлит в МЕНЬШУЮ сторону
+float change = -1.5; 
+dollars = floor(change);
+printf("Сдача включает %f долларовых банкнот.\n",
+dollars);
+//! Абсолютное значение выводится без дробной части благодаря использованию кода преобразования %f со спецификатором .0. 
+printf("Абсолютное значение -25.0: %.0f.\n", fabs(-25.0));
+//! Возведение в степень и вывод квадратного корня:
+printf("10 в третьей степени: %.0f. \n", pow(10.0, 3.0));
+printf("Квадратный корень из 64: %.0f. \n", sqrt(64));
+*/
 
-
-
-  // ТУТ ПРИМЕР(-ы) 19-ой ГЛАВЫ
-char first[25] = "Сидоров";
+// ТУТ ПРИМЕР(-ы) 19-ой ГЛАВЫ
+/*char first[25] = "Сидоров";
 char last[25] = " Анатолий";
 strcat(first, last);
 printf("Меня зовут %s\n", first);
+*/
 
 /*char userInput;
 printf("Do you want to continue? [Y/N] ");

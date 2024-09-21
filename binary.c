@@ -2,10 +2,38 @@
 #include <string.h>
 #include "binary.h"
 
-
+//! ПРИМЕР №8
 int main (){
-    unsigned char ch = 0x84;
+    unsigned char ch = 0x01;
+    //! Алгоритм вычисления: (aCh | (1 << (aN-1)));
+    //  [6]-ой бит устанавливаем в один
+    // 01010101
+    
+    // (aCh | (1 << 5)) - двигаем вправо на 5 бит
+    // 00000001 << 1
+    // 00100000 - это результат этой части (1 << 5))
 
+    // 01010101
+    // |
+    // 00100000
+    // =
+    // 01110101 - это результат этой части aCh |
+
+    print_bits_state(set_bit (0x00, 1));
+    printf("\n");
+    print_bits_state(clear_bit (ch, 1));
+    printf("\n");
+    print_bits_state(invert_bit (ch, 1));
+    printf("\n");
+    print_bits_state(invert_bit (0x00, 1));
+    printf("\n");
+
+return 0;
+}
+
+//! ПРИМЕТ №7
+/*int main (){
+    unsigned char ch = 0x85;
     print_bits_state(ch);
     printf("\n");
     print_bits_state_shift(ch);
@@ -16,7 +44,7 @@ int main (){
     // 00000000 - новое значение 
     return 0;
 }
-
+*/
 
 //! ПРИМЕР №6
 /*void print_bits_state(unsigned char aCh){
