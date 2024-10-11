@@ -19,20 +19,18 @@ int main() {
   // ТУТ ПРИМЕР(-ы) 24-ой ГЛАВЫ
   //! ЗАДАЧА ИЗ КНИГИ
 /*int kids;
-  int* pKids;
+  int *pKids;
   float price;
-  float* pPrice;
+  float *pPrice;
   char code;
-  char* pCode;
+  char *pCode;
   price = 17.50;
   pPrice = &price;
   printf("\n Скольких детей вы ведете в аквапарк? ");
   scanf(" %d", &kids);
   pKids = &kids;
   printf("\n У Вас есть скидка?");
-  printf(
-      "\n Введите E для скидки сотрудника, S для скидки по программе "
-      "Sav-More ");
+  printf("\n Введите E для скидки сотрудника, S для скидки по программе "Sav-More" ");
   printf("или N если скидки нет: ");
   scanf(" %c", &code);
   pCode = &code;
